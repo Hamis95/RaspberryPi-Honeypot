@@ -1,0 +1,18 @@
+# Raspberry pi conffaus
+
+**lataa ja asenna ubuntu käyttöjärjestelmä**
+
+$ sudo apt update
+$ sudo apt upgrade -y
+$ sudo apt-get install python-dev python-pip python-virtualenv
+$ sudo apt-get install -y build-essential libssl-dev libffi-dev
+$ sudo apt install nano
+$ sudo apt install ftp
+$ virtualenv env/
+$ pip install --upgrade 'setuptools<45.0.0'
+$ pip install rdpy
+$ . env/bin/activate
+$(env) pip install opencanary
+$(env) opencanaryd --copyconfig
+$(env) sudo nano /home/ubuntu/.opencanary.conf
+$(env) opencanaryd --start
